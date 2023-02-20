@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static "cp.css" %}">
+<title>Cancer Prediction</title>
+</head>
+<body>
+    <div align='center' class = 'cppp';>
+    <h1>Type of Cancer Prediction Web App</h1>
+    </div>
+    <div align='center'>
+    {% if result %}
+
+    <h1>**You have {{result}} type of cancer</h1>
+    {% endif %} 
+    <div align='center'>
+    <div align='center'>
+    <form action='' method="POST">
+        {% csrf_token %}
+        {{ fm.as_p }}
+        <input type="submit">
+    </form>
+    <div align='center'>
+</body>
+</html>
+
+
